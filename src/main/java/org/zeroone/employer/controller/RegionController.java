@@ -21,8 +21,8 @@ public class RegionController {
     }
 
     @PutMapping("/{id}")
-    public ResponseDto<RegionDto> updateRegion(@PathVariable Long id, @RequestBody RegionDto regionDto) {
-        return regionService.updateRegion(id, regionDto);
+    public ResponseDto<RegionDto> updateRegion(@RequestBody RegionDto regionDto) {
+        return regionService.updateRegion(regionDto);
     }
 
     @GetMapping

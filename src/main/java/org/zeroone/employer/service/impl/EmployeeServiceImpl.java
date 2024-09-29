@@ -42,8 +42,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public ResponseDto<EmployeeDto> updateEmployee(Long id, EmployeeDto employeeDto) {
-        Optional<Employee> employeeOptional = employeeRepository.findById(id);
+    public ResponseDto<EmployeeDto> updateEmployee(EmployeeDto employeeDto) {
+        Optional<Employee> employeeOptional = employeeRepository.findById(employeeDto.getId());
 
         if (employeeOptional.isPresent()) {
             Employee employee = employeeRepository.save(EmployeeMapper.toModel(employeeDto));

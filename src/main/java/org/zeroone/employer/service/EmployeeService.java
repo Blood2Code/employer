@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface EmployeeService {
     ResponseDto<EmployeeDto> createEmployee(EmployeeDto employeeDto);
-    ResponseDto<EmployeeDto> updateEmployee(Long id, EmployeeDto employeeDto);
+    ResponseDto<EmployeeDto> updateEmployee(EmployeeDto employeeDto);
     List<EmployeeDto> getAllEmployees();
     ResponseDto<Void> deleteEmployee(Long id);
 }

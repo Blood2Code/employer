@@ -45,11 +45,12 @@ public class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public ResponseDto<RegionDto> updateRegion(Long id, RegionDto regionDto) {
-        Optional<Region> regionOptional = regionRepository.findById(id);
+    public ResponseDto<RegionDto> updateRegion(RegionDto regionDto) {
+        Optional<Region> regionOptional = regionRepository.findById(regionDto.getId());
 
         if (regionOptional.isPresent()) {
-            Region updatedRegion = regionRepository.save(RegionMapper.toModel(regionDto));
+            regionOptional.get().setName(regionDto.getName());
+            Region updatedRegion = regionRepository.save(regionOptional.get());
 
             return ResponseDto.<RegionDto>builder()
                     .data(RegionMapper.toDto(updatedRegion))

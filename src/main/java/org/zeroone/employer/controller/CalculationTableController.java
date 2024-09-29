@@ -25,8 +25,8 @@ public class CalculationTableController {
     }
 
     @PutMapping("/{id}")
-    public ResponseDto<CalculationTableDto> updateCalculationTable(@PathVariable Long id, @RequestBody CalculationTableDto calculationTableDto) {
-        return calculationTableService.updateCalculationTable(id, calculationTableDto);
+    public ResponseDto<CalculationTableDto> updateCalculationTable(@RequestBody CalculationTableDto calculationTableDto) {
+        return calculationTableService.updateCalculationTable(calculationTableDto);
     }
 
     @GetMapping
