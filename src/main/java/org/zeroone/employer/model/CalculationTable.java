@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class CalculationTable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne

@@ -11,6 +11,7 @@ import lombok.*;
 @Builder
 public class Organization {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
     private String name;
