@@ -48,8 +48,8 @@ public class CalculationTableServiceImpl implements CalculationTableService {
 
 
     @Override
-    public ResponseDto<CalculationTableDto> updateCalculationTable(Long id, CalculationTableDto calculationTableDto) {
-        Optional<CalculationTable> calculationTableOptional = calculationTableRepository.findById(id);
+    public ResponseDto<CalculationTableDto> updateCalculationTable(CalculationTableDto calculationTableDto) {
+        Optional<CalculationTable> calculationTableOptional = calculationTableRepository.findById(calculationTableDto.getId());
 
         if (calculationTableOptional.isPresent()) {
             CalculationTable updatedTable = calculationTableRepository.save(CalculationTableMapper.toModel(calculationTableDto));

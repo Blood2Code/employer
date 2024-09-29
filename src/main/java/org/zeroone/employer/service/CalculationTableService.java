@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CalculationTableService {
     ResponseDto<CalculationTableDto> createCalculationTable(CalculationTableDto calculationTableDto);
-    ResponseDto<CalculationTableDto> updateCalculationTable(Long id, CalculationTableDto calculationTableDto);
+    ResponseDto<CalculationTableDto> updateCalculationTable(CalculationTableDto calculationTableDto);
     ResponseDto<List<CalculationTableDto>> getAllCalculationTables();
     ResponseDto<Void> deleteCalculationTable(Long id);
 }

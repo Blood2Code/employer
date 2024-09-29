@@ -21,8 +21,8 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseDto<EmployeeDto> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDto employeeDto) {
-        return employeeService.updateEmployee(id, employeeDto);
+    public ResponseDto<EmployeeDto> updateEmployee(@RequestBody EmployeeDto employeeDto) {
+        return employeeService.updateEmployee(employeeDto);
     }
 
     @GetMapping

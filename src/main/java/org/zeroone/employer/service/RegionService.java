@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface RegionService {
     ResponseDto<RegionDto> createRegion(RegionDto regionDto);
-    ResponseDto<RegionDto> updateRegion(Long id, RegionDto regionDto);
+    ResponseDto<RegionDto> updateRegion(RegionDto regionDto);
     ResponseDto<Void> deleteRegion(Long id);
     ResponseDto<List<RegionDto>> getAllRegions();
 }

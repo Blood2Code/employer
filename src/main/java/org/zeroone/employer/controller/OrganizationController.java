@@ -21,8 +21,8 @@ public class OrganizationController {
     }
 
     @PutMapping("/{id}")
-    public ResponseDto<OrganizationDto> updateOrganization(@PathVariable Long id, @RequestBody OrganizationDto organizationDto) {
-        return organizationService.updateOrganization(id, organizationDto);
+    public ResponseDto<OrganizationDto> updateOrganization(@RequestBody OrganizationDto organizationDto) {
+        return organizationService.updateOrganization(organizationDto);
     }
 
     @GetMapping
